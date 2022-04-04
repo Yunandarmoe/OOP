@@ -4,21 +4,22 @@ class Animal
 {
     private $name;
 
-    public function setName($name)
+    public function __construct($name)
     {
         $this->name = $name;
     }
 
     public function getName()
     {
-        echo $this->name;
+        return $this->name;
+    }
+
+    public function eat($food)
+    {
+        return "Eat $food";
     }
 }
 
-class Dog extends Animal
-{
-}
-
-$cat = new Animal;
-$cat->setName('Shwe War');
+$cat = new Animal('Shwe Kyar');
+//echo $cat->name;
 echo $cat->getName();

@@ -1,12 +1,25 @@
 <?php
-class Color
+
+class Greet
 {
-    public $color;
-    public function __construct($color)
+    public $name = 'Hello World';
+    public function __construct($name)
     {
-        $this->color = $color;
+        $this->name = $name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function hello()
+    {
+        return 'Hello!';
     }
 }
 
-$red = new Color("Red");
-echo $red->color;
+$greet = new Greet("Welcome...");
+//$greet->name = "Welcome...";
+//$greet->setName('Welcome...');
+echo $greet->name;

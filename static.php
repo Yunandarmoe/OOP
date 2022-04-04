@@ -1,13 +1,15 @@
 <?php
-class Greet
-{
-    public static $greet = "Welcome";
 
-    public function hello()
+class Car
+{
+    public static $name = "Marcede";
+
+    public static function drive()
     {
-        echo "Hello World!";
+        return "Drive";
     }
 }
 
-
-echo Greet::$greet;
+echo Car::$name;
+echo "<br>";
+echo Car::drive();
