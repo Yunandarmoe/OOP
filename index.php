@@ -1,15 +1,34 @@
 <?php
 
-class Car
+class Animal
 {
-    public static $name = "Marcede";
+    public $name;
 
-    public static function drive()
+    public function __construct($name)
     {
-        return "Drive";
+        echo 'Eat fish <br>';
+    }
+
+    public function action()
+    {
+        return 'Walk <br>';
     }
 }
 
-echo Car::$name;
-echo "<br>";
-echo Car::drive();
+class Cat extends Animal
+{
+    public $age;
+
+    public function __construct($name, $age)
+    {
+        $this->age = $age;
+        parent::__construct($name);
+    }
+
+}
+
+$cat = new Cat('Shwe War', 10);
+//echo $cat->name;
+//echo $cat->eat();
+//echo $cat->action();
+echo $cat->age;

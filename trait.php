@@ -2,7 +2,7 @@
 
 trait Mother
 {
-    public $name = "Emily";
+    public $name = "Hla Hla";
 
     public function white()
     {
